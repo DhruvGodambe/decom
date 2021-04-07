@@ -1,8 +1,5 @@
-const ConvertLib = artifacts.require("ConvertLib");
-const MetaCoin = artifacts.require("MetaCoin");
+var Decom = artifacts.require("Decom");
 
-module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
-};
+module.exports = function(deployer, network, accounts) {
+    deployer.deploy(Decom, "0x790A616A68AFc66ffd9BE93DC2292Ba44c4D5288");
+}
